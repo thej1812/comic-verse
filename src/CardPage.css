@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.comic-containe {
+    background-color: #f5f5dc;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    color: #3B3030;
+    
+
+}
+
+.comic-titl {
+    margin-top: 14em;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #ffcc00, -3px -3px 0px #ff0000;
+    margin-bottom: 30px;
+    background-color: #ffcc00;
+}
+
+.card-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comic-card {
+    width: 320px;
+    background: white;
+    border: 5px solid black;
+    box-shadow: 7px 7px 0px black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    opacity: 0; 
+    transform: translateX(-150px); 
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.comic-card:nth-child(even) {
+    transform: translateX(150px);
+}
+
+
+.comic-card.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.comic-card h2 {
+    font-size: 24px;
+    color: #ff0000;
+}
+
+.comic-card p {
+    font-size: 16px;
+}
+
+.comic-card::after {
+    content: "💥";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 30px;
+}
+
+.comic-card .hover-image {
+    position: absolute;
+    top: -120px;
+    left: 20%;
+    transform: translateX(-50%) scale(0);
+    width: 100px;
+    height: 130px;
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    transform: scale(1.1) rotate(-3deg);
+    filter: contrast(1.5) brightness(1.2) saturate(1.5);
+    outline: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+}
+
+/* 🎯 1st Card - Zoom & Shake */
+.comic-card:nth-child(1):hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(3);
+    animation: bounce 0.5s ease-in-out;
+
+}
+
+/* 🎯 2nd Card - Pop & Bounce */
+.comic-card:nth-child(2):hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(3);
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* 🎯 3rd Card - Flip & Fade */
+.comic-card:nth-child(3):hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(3) rotateY(180deg);
+}
+
+/* 🎯 4th Card - Spin & Zoom */
+.comic-card:nth-child(4):hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(3) rotate(360deg);
+}
+
+/* 🎯 5th Card - Pulse Effect */
+.comic-card:nth-child(5):hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(3);
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+/* 💥 Shake Effect */
+@keyframes shake {
+    0% { transform: translateX(-50%) scale(3) rotate(3deg); }
+    50% { transform: translateX(-50%) scale(3) rotate(-3deg); }
+    100% { transform: translateX(-50%) scale(3) rotate(3deg); }
+}
+
+/* 💥 Bounce Effect */
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) scale(3) translateY(0); }
+    50% { transform: translateX(-50%) scale(3) translateY(-10px); }
+}
+
+/* 💥 Pulse Effect */
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(2.8); }
+    50% { transform: translateX(-50%) scale(3.2); }
+    100% { transform: translateX(-50%) scale(2.8); }
+}

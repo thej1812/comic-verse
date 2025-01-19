@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+.comic-contain {
+  text-align: center;
+  background-color: red;
+  font-family: "Bangers", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.comic-b {
+  background: yellow;
+  border: 5px solid black;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 8px 8px 0px black;
+  max-width: 400px;
+  animation: pop 0.3s ease-in-out;
+}
+
+
+.comic-b input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-family: "Bangers", cursive;
+  background: white;
+  box-shadow: 4px 4px 0px black;
+}
+
+
+.comic-b button {
+  background: red;
+  color: white;
+  padding: 15px;
+  font-size: 1.5em;
+  font-family: "Bangers", cursive;
+  cursor: pointer;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 5px 5px 0px black;
+}
+
+.comic-b button:hover {
+  transform: scale(1.1);
+  background: blue;
+}
+
+.comic-b p {
+  cursor: pointer;
+  color: black;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+/* Pop Animation */
+@keyframes pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

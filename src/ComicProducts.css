@@ -1,0 +1,96 @@
+
+.comic-tit {
+  font-size: 3rem;
+  color: black;
+  text-shadow: 4px 4px 0px white, 8px 8px 0px black;
+  margin-bottom: 20px;
+}
+
+
+.comic-container {
+  padding: 20px;
+  
+}
+
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.comic-card {
+  margin-left: 80px;
+  background: white;
+  border: 5px solid black;
+  box-shadow: 8px 8px 0px black;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.comic-card:hover {
+  transform: scale(1.05);
+  animation: wiggle 0.2s ease-in-out;
+}
+
+.comic-image {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.comic-name {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: black;
+  text-shadow: 3px 3px 0px yellow;
+}
+
+
+.comic-msg {
+  position: absolute;
+  background: rgb(255, 255, 0);
+  color: black;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px black;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  white-space: nowrap;
+}
+
+
+.comic-card:hover .comic-msg {
+  display: block;
+  
+}
+
+
+.comic-btn {
+  background: yellow;
+  border: 3px solid black;
+  font-size: 1.2rem;
+  font-family: "Bangers", cursive;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 0px black;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.comic-btn:hover {
+  transform: scale(1.1);
+  background: red;
+  color: white;
+}
