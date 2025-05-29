@@ -82,7 +82,7 @@
     box-shadow: 5px 5px 0px black;
 }
 
-/* 🎯 1st Card - Zoom & Shake */
+/* 🎯 1st Card - Zoom &  */
 .comic-card:nth-child(1):hover .hover-image {
     opacity: 1;
     transform: translateX(-50%) scale(3);
